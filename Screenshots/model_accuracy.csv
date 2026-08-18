@@ -1,0 +1,5 @@
+Model,Accuracy
+Naive Bayes,0.9590034113060428
+Logistic Regression,0.982943469785575
+Random Forest,0.9844054580896686
+MLP Classifier,0.9842836257309941
