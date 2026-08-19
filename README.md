@@ -93,32 +93,20 @@ Duplicate entries were removed during preprocessing, and the final cleaned datas
 
 ## 🔄 5. Project Workflow
 
-<details open>
-<summary>🧩 View pipeline diagram</summary>
+The end-to-end pipeline used to process the email dataset, extract text features, train multiple classifiers, and select the best-performing model.
 
-```text
-Raw Combined Email Dataset (82,078 records)
-        ↓
-Data Cleaning (missing values, duplicates)
-        ↓
-Text Preprocessing (lowercase, remove punctuation/numbers,
-                     remove stopwords → clean_text)
-        ↓
-Exploratory Data Analysis (class distribution, email length)
-        ↓
-Feature Extraction — TF-IDF (5,000 features)
-        ↓
-Train-Test Split (80:20, random_state = 42)
-        ↓
-Model Training (Naive Bayes, Logistic Regression,
-                 Random Forest, MLP Classifier)
-        ↓
-Model Evaluation (Accuracy, Precision, Recall, F1, Confusion Matrix)
-        ↓
-Model Comparison → Best Model Selection (Random Forest)
-```
-
-</details>
+| **Stage** | **Process** | **Key Details** |
+|---|---|---|
+| **1. Dataset Loading** | Load combined email dataset | 82,078 email records |
+| **2. Data Cleaning** | Handle missing values and duplicates | Prepare a consistent dataset |
+| **3. Text Preprocessing** | Clean email text | Lowercase, remove punctuation/numbers, remove stopwords |
+| **4. Exploratory Data Analysis** | Analyze dataset characteristics | Class distribution and email length |
+| **5. Feature Extraction** | Convert text into numerical features | TF-IDF with 5,000 features |
+| **6. Train-Test Split** | Divide data for training and evaluation | 80:20 split, `random_state=42` |
+| **7. Model Training** | Train four classifiers | Naive Bayes, Logistic Regression, Random Forest, MLP |
+| **8. Model Evaluation** | Measure model performance | Accuracy, Precision, Recall, F1-score, Confusion Matrix |
+| **9. Model Comparison** | Compare all trained models | Identify the best-performing classifier |
+| **10. Best Model Selection** | Select final model | Random Forest |
 
 ## 🧹 6. Data Preprocessing
 
