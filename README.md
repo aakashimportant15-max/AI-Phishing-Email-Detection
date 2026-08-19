@@ -42,13 +42,13 @@ This project builds a **spam / phishing email classifier** using **NLP (TF‑IDF
 
 ---
 
-## 1. Project Overview
+## 🧭 1. Project Overview
 
 Email is one of the most widely used forms of digital communication, but not every email that lands in an inbox is trustworthy. **Phishing and spam emails** often contain fake offers, malicious links, or harmful content designed to steal personal information or waste users' time. Manually checking every email is impractical given the sheer volume received daily.
 
 This project builds an automated system that classifies emails as **spam/phishing** or **legitimate (ham)** using **Natural Language Processing (NLP)** to convert raw email text into numerical features, and **Machine Learning** to learn patterns that separate the two classes. Four different algorithms were trained and benchmarked on the same dataset and train/test split to ensure a fair comparison.
 
-## 2. Project Objectives
+## 🎯 2. Project Objectives
 
 - Build a text-based system to automatically classify emails as **spam** or **legitimate**.
 - Clean and preprocess raw email text using standard NLP techniques.
@@ -57,7 +57,7 @@ This project builds an automated system that classifies emails as **spam/phishin
 - Evaluate each model using accuracy, precision, recall, F1-score, and confusion matrix.
 - Identify the best-performing model for phishing/spam email detection.
 
-## 3. Dataset Description
+## 🗃️ 3. Dataset Description
 
 The dataset combines spam and legitimate (ham) email messages collected from multiple publicly available email sources into a single dataset for training and evaluation.
 
@@ -72,7 +72,7 @@ The dataset combines spam and legitimate (ham) email messages collected from mul
 
 Duplicate entries were removed during preprocessing, and the final cleaned dataset (82,078 records) was used for feature extraction, training, and evaluation.
 
-## 4. Technologies Used
+## 🛠️ 4. Technologies Used
 
 | Component | Details |
 |---|---|
@@ -91,7 +91,7 @@ Duplicate entries were removed during preprocessing, and the final cleaned datas
 | `scikit-learn` | Machine learning |
 | `joblib` | Saving trained models |
 
-## 5. Project Workflow
+## 🔄 5. Project Workflow
 
 <details open>
 <summary>🧩 View pipeline diagram</summary>
@@ -120,7 +120,7 @@ Model Comparison → Best Model Selection (Random Forest)
 
 </details>
 
-## 6. Data Preprocessing
+## 🧹 6. Data Preprocessing
 
 The dataset was first checked for missing values and duplicate records, which were removed to improve data quality. The email text was then cleaned using standard NLP preprocessing steps:
 
@@ -132,7 +132,7 @@ The dataset was first checked for missing values and duplicate records, which we
 
 The cleaned text was stored in a new column, `clean_text`, which was used for feature extraction and model training.
 
-## 7. Exploratory Data Analysis (EDA)
+## 🔍 7. Exploratory Data Analysis (EDA)
 
 EDA was performed to understand the class balance and how spam/legitimate emails differ in length.
 
@@ -151,7 +151,7 @@ EDA was performed to understand the class balance and how spam/legitimate emails
 | Class Distribution | Check spam vs. legitimate balance | Both classes are well represented (no severe imbalance) |
 | Email Length Comparison | Compare character counts across classes | Email length varies between spam and legitimate emails, providing useful signal for classification |
 
-## 8. Feature Extraction (TF-IDF)
+## 📊 8. Feature Extraction (TF-IDF)
 
 Since ML models cannot process raw text, the cleaned email text was converted into numerical vectors using **TF-IDF (Term Frequency–Inverse Document Frequency)**. The vectorizer was configured with a maximum of **5,000 features**, giving higher importance to words that are frequent within a specific email but rare across the overall corpus.
 
@@ -162,7 +162,7 @@ Since ML models cannot process raw text, the cleaned email text was converted in
 </p>
 <p align="center"><i>Top 20 important features identified by the Random Forest model</i></p>
 
-## 9. Train-Test Split
+## ✂️ 9. Train-Test Split
 
 An **80:20 split** was used with a fixed `random_state = 42` to ensure reproducibility, and the same split was used across all four models for a fair comparison.
 
@@ -173,7 +173,7 @@ An **80:20 split** was used with a fixed `random_state = 42` to ensure reproduci
 | `y_train` | (65,662,) |
 | `y_test` | (16,416,) |
 
-## 10. Machine Learning Models
+## 🤖 10. Machine Learning Models
 
 Four algorithms were trained and evaluated on identical TF‑IDF features and train/test splits.
 
@@ -217,7 +217,8 @@ Four algorithms were trained and evaluated on identical TF‑IDF features and tr
 
 </details>
 
-## 11. Model Evaluation
+
+## 📈 11. Model Evaluation
 
 All four models were evaluated on the same held-out test set using **accuracy, precision, recall, F1-score, classification report, and confusion matrix**.
 
@@ -279,7 +280,7 @@ All four models were evaluated on the same held-out test set using **accuracy, p
 
 </details>
 
-## 12. Model Comparison
+## 🏆 12. Model Comparison
 
 | Rank | Model | Accuracy (%) |
 |---|---|---|
@@ -290,7 +291,7 @@ All four models were evaluated on the same held-out test set using **accuracy, p
 
 Ensemble learning (Random Forest) and the neural network approach (MLP) outperformed the probabilistic baseline (Naive Bayes), while Logistic Regression remained a strong, simple alternative.
 
-## 13. Results
+## ✅ 13. Results
 
 - All four models achieved **high classification accuracy** (95.9%–98.44%) on the same 16,416-email test set.
 - **Random Forest** was the best-performing model, achieving **98.44% accuracy** with strong precision, recall, and F1-score for both classes.
@@ -298,7 +299,7 @@ Ensemble learning (Random Forest) and the neural network approach (MLP) outperfo
 - **Multinomial Naive Bayes** was the weakest of the four, though still reliable at **95.90%** accuracy.
 - Words such as `aug`, `wrote`, `enron`, `pm`, and `click` emerged as the most influential features for classification.
 
-## 14. Project Folder Structure
+## 📁 14. Project Folder Structure
 
 ```text
 AI-Phishing-Email-Detection/
@@ -324,7 +325,7 @@ AI-Phishing-Email-Detection/
 └── README.md
 ```
 
-## 15. Project Outputs
+## 🗂️ 15. Project Outputs
 
 | Output Type | Location | File(s) |
 |---|---|---|
@@ -337,7 +338,7 @@ AI-Phishing-Email-Detection/
 
 > **Note:** The `Model/` folder currently contains a link/reference document (`model.pkl files -LINK.pdf`) rather than the raw `.pkl` model files directly in the repository.
 
-## 16. Installation Guide
+## ⚙️ 16. Installation Guide
 
 ```bash
 git clone https://github.com/aakashimportant15-max/AI-Phishing-Email-Detection.git
@@ -350,7 +351,7 @@ Install the core dependencies used in the notebook:
 pip install pandas numpy matplotlib nltk scikit-learn joblib
 ```
 
-## 17. Usage Guide
+## 🚀 17. Usage Guide
 
 1. Obtain the dataset referenced in `Dataset/Dataset -LINK.pdf`.
 2. Open `Notebook/AI-Phishing-email-detection.ipynb` in Jupyter Notebook.
@@ -358,14 +359,13 @@ pip install pandas numpy matplotlib nltk scikit-learn joblib
 4. Review the generated visualizations and metrics against the outputs stored in `Screenshots/`.
 5. Refer to `Model/model.pkl files -LINK.pdf` for access to the saved trained models.
 
-## 18. Future Scope
-
+## 🔭 18. Future Scope
 - Train on larger and more diverse email datasets collected from different sources to improve detection of new phishing techniques.
 - Explore advanced deep learning architectures such as **LSTM, BERT, or Transformer-based models**.
 - Integrate the system into email services, web applications, or browser extensions for real-time phishing detection.
 - Incorporate additional signals such as sender information, URLs, attachments, and domain analysis to improve detection accuracy.
 
-## 19. Limitations
+## ⚠️ 19. Limitations
 
 - The models were trained and tested on a single combined dataset; additional datasets may improve generalization to new phishing patterns.
 - Classification is based mainly on textual content and does not use sender reputation or real-time email metadata.
@@ -373,29 +373,20 @@ pip install pandas numpy matplotlib nltk scikit-learn joblib
 - Advanced deep learning models (LSTM, BERT, Transformers) were not implemented.
 - Performance depends on the quality of the training dataset and preprocessing steps applied.
 
-## 20. Conclusion
+## 🏁 20. Conclusion
 
 This project demonstrates that machine learning techniques, combined with NLP-based feature extraction, can effectively classify emails as phishing or legitimate. Four algorithms — Multinomial Naive Bayes, Logistic Regression, Random Forest, and an MLP Classifier — were trained and evaluated on the same 82,078-record dataset, with **Random Forest emerging as the best-performing model at 98.44% accuracy**. The project provides a simple, effective foundation for applying NLP and Machine Learning to real-world cybersecurity problems such as automated phishing email detection.
 
-## 21. References
+## 📚 21. References
 
-- Project Report: *AI-Driven Phishing Email Detection Using NLP*, Indian Institute of Computing and Technology (IICT), 15 June – 30 July 2026.
-- Dataset link: see `Dataset/Dataset -LINK.pdf`.
-- Libraries: [scikit-learn](https://scikit-learn.org/), [pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLTK](https://www.nltk.org/), [Matplotlib](https://matplotlib.org/).
+- **Project Report:** *AI-Driven Phishing Email Detection Using NLP*, Indian Institute of Computing and Technology (IICT).
+- **Dataset:** See `Dataset/Dataset -LINK.pdf` for the dataset source.
+- **Libraries:** [scikit-learn](https://scikit-learn.org/), [pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [NLTK](https://www.nltk.org/), [Matplotlib](https://matplotlib.org/).
 
-## 22. Author
+## 👤 22. Author
 
-<div align="center">
-
-# Aakash
-
-**Machine Learning & NLP Enthusiast**
-
-</div>
-
----
-
-### About
+**Aakash**  
+*Machine Learning & NLP Enthusiast*
 
 B.Tech CSE student and aspiring data/AI professional with hands-on experience in data analysis, machine learning, NLP, and dashboard development.
 
@@ -408,14 +399,14 @@ This project was developed as part of the **Summer Internship Program in AI & ML
 - Model evaluation using accuracy, precision, recall, F1-score, and confusion matrices
 - Identifying Random Forest as the best-performing model with **98.44% accuracy**
 
-### Project Repository
+### 🔗 Project Repository
 
-🔗 **GitHub:** [AI-Phishing-Email-Detection](https://github.com/aakashimportant15-max/AI-Phishing-Email-Detection)
+**GitHub:** [AI-Phishing-Email-Detection](https://github.com/aakashimportant15-max/AI-Phishing-Email-Detection)
 
 ---
 
 <div align="center">
 
-⭐ **If you found this project useful, consider starring the repository.**
+⭐ *If you found this project useful, consider starring the repository.*
 
 </div>
