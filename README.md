@@ -26,20 +26,18 @@ This project builds a **spam / phishing email classifier** using **NLP (TF‑IDF
 <p align="center"><i>Model accuracy comparison — Random Forest leads at 98.44%</i></p>
 
 ---
-
 ## 📑 Table of Contents
 
 | | | |
 |---|---|---|
-| [🧭 1. Project Overview](#1-project-overview) | [🎯 2. Project Objectives](#2-project-objectives) | [🗃️ 3. Dataset Description](#3-dataset-description) |
-| [🛠️ 4. Technologies Used](#4-technologies-used) | [🔄 5. Project Workflow](#5-project-workflow) | [🧹 6. Data Preprocessing](#6-data-preprocessing) |
-| [🔍 7. Exploratory Data Analysis](#7-exploratory-data-analysis-eda) | [📊 8. Feature Extraction (TF-IDF)](#8-feature-extraction-tf-idf) | [✂️ 9. Train-Test Split](#9-train-test-split) |
-| [🤖 10. Machine Learning Models](#10-machine-learning-models) | [📈 11. Model Evaluation](#11-model-evaluation) | [🏆 12. Model Comparison](#12-model-comparison) |
-| [✅ 13. Results](#13-results) | [📁 14. Project Folder Structure](#14-project-folder-structure) | [🗂️ 15. Project Outputs](#15-project-outputs) |
-| [⚙️ 16. Installation Guide](#16-installation-guide) | [🚀 17. Usage Guide](#17-usage-guide) | [🔭 18. Future Scope](#18-future-scope) |
-| [⚠️ 19. Limitations](#19-limitations) | [🏁 20. Conclusion](#20-conclusion) | [📚 21. References](#21-references) |
-| [👤 22. Author](#22-author) | | |
-
+| [🧭 1. Project Overview](#-1-project-overview) | [🎯 2. Project Objectives](#-2-project-objectives) | [🗃️ 3. Dataset Description](#-3-dataset-description) |
+| [🛠️ 4. Technologies Used](#-4-technologies-used) | [🔄 5. Project Workflow](#-5-project-workflow) | [🧹 6. Data Preprocessing](#-6-data-preprocessing) |
+| [🔍 7. Exploratory Data Analysis](#-7-exploratory-data-analysis-eda) | [📊 8. Feature Extraction (TF-IDF)](#-8-feature-extraction-tf-idf) | [✂️ 9. Train-Test Split](#-9-train-test-split) |
+| [🤖 10. Machine Learning Models](#-10-machine-learning-models) | [📈 11. Model Evaluation](#-11-model-evaluation) | [🏆 12. Model Comparison](#-12-model-comparison) |
+| [✅ 13. Results](#-13-results) | [📁 14. Project Folder Structure](#-14-project-folder-structure) | [🗂️ 15. Project Outputs](#-15-project-outputs) |
+| [⚙️ 16. Installation Guide](#-16-installation-guide) | [🚀 17. Usage Guide](#-17-usage-guide) | [🔭 18. Future Scope](#-18-future-scope) |
+| [⚠️ 19. Limitations](#-19-limitations) | [🏁 20. Conclusion](#-20-conclusion) | [📚 21. References](#-21-references) |
+| [👤 22. Author](#-22-author) | | |
 ---
 
 ## 🧭 1. Project Overview
